@@ -37,6 +37,13 @@ fn main() {
                 solutions::day02::part2()
             }
         }
+        "03" => {
+            if part == "1" {
+                solutions::day03::part1()
+            } else {
+                solutions::day03::part2()
+            }
+        }
         _ => {
             println!("Day {} not implemented yet", day);
             0
