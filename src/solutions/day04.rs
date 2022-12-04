@@ -1,6 +1,6 @@
 // Day 4 solution by Da-Real-Kryall
 
-pub fn part1() -> i128 {
+pub fn part1() -> String {
     let input = include_str!("../inputs/day04.txt");
     let mut current_total = 0;
     for line in input.lines() {
@@ -27,10 +27,10 @@ pub fn part1() -> i128 {
             println!("{}-{} contains {}-{}", range_b.0, range_b.1, range_a.0, range_a.1);
         }
     }
-    current_total
+    current_total.to_string()
 }
 
-pub fn part2() -> i128 {
+pub fn part2() -> String {
     let input = include_str!("../inputs/day04.txt");
     let mut current_total = 0;
     for line in input.lines() {
@@ -52,5 +52,5 @@ pub fn part2() -> i128 {
             println!("{}-{} intersects {}-{}", range_a.0, range_a.1, range_b.0, range_b.1);
         }
     }
-    current_total
+    current_total.to_string()
 }

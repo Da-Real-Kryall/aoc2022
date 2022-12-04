@@ -1,7 +1,7 @@
 // Day 1 solution by Da-Real-Kryall
 
 
-pub fn part1() -> i128 {
+pub fn part1() -> String {
     let input = include_str!("../inputs/day01.txt");
     let mut current_total = 0;
     let mut max = 0;
@@ -15,10 +15,10 @@ pub fn part1() -> i128 {
             max = current_total;
         }
     }
-    max
+    max.to_string()
 }
 
-pub fn part2() -> i128 {
+pub fn part2() -> String {
     let input = include_str!("../inputs/day01.txt");
     let mut current_total = 0;
     let mut max: [i128; 3] = [0, 0, 0];
@@ -41,5 +41,5 @@ pub fn part2() -> i128 {
         }
         current_total = current_total + line.parse::<i128>().unwrap();
     }
-    max[0]+max[1]+max[2]
+    (max[0]+max[1]+max[2]).to_string()
 }

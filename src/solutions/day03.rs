@@ -58,7 +58,7 @@ fn priority(letter: char) -> i128 {
     }
 }
 
-pub fn part1() -> i128 {
+pub fn part1() -> String {
     let input = include_str!("../inputs/day03.txt");
     let mut total_score: i128 = 0;
     for line in input.lines() {
@@ -81,10 +81,10 @@ pub fn part1() -> i128 {
             }
         }
     }
-    total_score
+    total_score.to_string()
 }
 
-pub fn part2() -> i128 {
+pub fn part2() -> String {
     let input = include_str!("../inputs/day03.txt");
     let mut candidates = String::new();
     let mut total_score: i128 = 0;
@@ -111,7 +111,7 @@ pub fn part2() -> i128 {
         }
         
     }
-    total_score
+    total_score.to_string()
 }
 
 // why are you depressed? there's so much goodness in the world!

@@ -2,7 +2,7 @@
 
 // A is rock, B is paper and C is scissors for opponent
 // X is rock, Y is paper and Z is scissors for response
-pub fn part1() -> i128 {
+pub fn part1() -> String {
     let input = include_str!("../inputs/day02.txt");
     let mut total_score: i128 = 0;
     for line in input.lines() {
@@ -31,10 +31,10 @@ pub fn part1() -> i128 {
             _ => 0,
         };
     }
-    total_score
+    total_score.to_string()
 }
 
-pub fn part2() -> i128 {
+pub fn part2() -> String {
     let input = include_str!("../inputs/day02.txt");
     let mut current_total = 0;
 
@@ -69,5 +69,5 @@ pub fn part2() -> i128 {
             _ => 0,
         }
     };
-    current_total
+    current_total.to_string()
 }

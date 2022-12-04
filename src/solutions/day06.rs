@@ -1,13 +1,13 @@
 // Day 6 solution by Da-Real-Kryall
 
-pub fn part1() -> i128 {
+pub fn part1() -> String {
     let input = include_str!("../inputs/day06.txt");
     let mut current_total = 0;
-    current_total
+    current_total.to_string()
 }
 
-pub fn part2() -> i128 {
+pub fn part2() -> String {
     let input = include_str!("../inputs/day06.txt");
     let mut current_total = 0;
-    current_total
+    current_total.to_string()
 }
