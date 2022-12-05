@@ -86,7 +86,6 @@ pub fn part1() -> String {
 
 pub fn part2() -> String {
     let input = include_str!("../inputs/day03.txt");
-    let mut candidates = String::new();
     let mut total_score: i128 = 0;
 
     for index in 0..(input.lines().count() / 3) {
