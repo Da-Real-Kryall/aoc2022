@@ -1,5 +1,10 @@
 // Day 10 solution by Da-Real-Kryall
-fn advance_clock_1(x: &i32, cycle_num: &mut i32, signal_strength_sum: &mut i32, num_iter: i32) -> bool {
+fn advance_clock_1(
+    x: &i32,
+    cycle_num: &mut i32,
+    signal_strength_sum: &mut i32,
+    num_iter: i32,
+) -> bool {
     for _ in 0..num_iter {
         *cycle_num += 1;
         if [20, 60, 100, 140, 180, 220].contains(cycle_num) {
@@ -33,7 +38,7 @@ pub fn part1() -> String {
             _ => {}
         }
     }
-    return signal_strength_sum.to_string()
+    return signal_strength_sum.to_string();
 }
 
 fn advance_clock_2(x: &i32, cycle_num: &mut i32, screen: &mut String, num_iter: i32) {
@@ -55,7 +60,7 @@ pub fn part2() -> String {
     let mut x: i32 = 1;
     let mut cycle_num: i32 = 0;
     let mut screen: String = String::new();
-    
+
     for line in input.lines() {
         let mut instruction = line.split(" ");
         match instruction.next().unwrap() {

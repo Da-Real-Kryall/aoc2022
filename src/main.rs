@@ -5,7 +5,6 @@ use std::env;
 
 mod solutions;
 
-
 fn main() {
     // Get the day number and part number from the command line
     let args: Vec<String> = env::args().collect();

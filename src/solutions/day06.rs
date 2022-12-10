@@ -17,7 +17,7 @@ pub fn part1() -> String {
             }
         }
         if all_1 {
-            return (index+1).to_string();
+            return (index + 1).to_string();
         }
         println!("{}", letter_history);
         letter_history = letter_history.chars().skip(1).collect::<String>();
@@ -42,7 +42,7 @@ pub fn part2() -> String {
             }
         }
         if all_1 {
-            return (index+1).to_string();
+            return (index + 1).to_string();
         }
         println!("{}", letter_history);
         letter_history = letter_history.chars().skip(1).collect::<String>();

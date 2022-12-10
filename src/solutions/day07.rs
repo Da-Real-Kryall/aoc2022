@@ -16,20 +16,18 @@ pub fn part1() -> String {
         let mut tokens = line.split_whitespace();
         let token = tokens.next().unwrap();
         match token {
-            "$" => {
-                match tokens.next().unwrap() {
-                    "cd" => {
-                        let token = tokens.next().unwrap();
-                        if token == ".." {
-                            current_directory = cd_back(&current_directory);
-                        } else {
-                            current_directory += "/";
-                            current_directory += token;
-                        }
+            "$" => match tokens.next().unwrap() {
+                "cd" => {
+                    let token = tokens.next().unwrap();
+                    if token == ".." {
+                        current_directory = cd_back(&current_directory);
+                    } else {
+                        current_directory += "/";
+                        current_directory += token;
                     }
-                    _ => {}
                 }
-            }
+                _ => {}
+            },
             "dir" => {
                 let token = tokens.next().unwrap();
                 files.push((current_directory.clone() + "/" + token, 0));
@@ -72,20 +70,18 @@ pub fn part2() -> String {
         let mut tokens = line.split_whitespace();
         let token = tokens.next().unwrap();
         match token {
-            "$" => {
-                match tokens.next().unwrap() {
-                    "cd" => {
-                        let token = tokens.next().unwrap();
-                        if token == ".." {
-                            current_directory = cd_back(&current_directory);
-                        } else {
-                            current_directory += "/";
-                            current_directory += token;
-                        }
+            "$" => match tokens.next().unwrap() {
+                "cd" => {
+                    let token = tokens.next().unwrap();
+                    if token == ".." {
+                        current_directory = cd_back(&current_directory);
+                    } else {
+                        current_directory += "/";
+                        current_directory += token;
                     }
-                    _ => {}
                 }
-            }
+                _ => {}
+            },
             "dir" => {
                 let token = tokens.next().unwrap();
                 files.push((current_directory.clone() + "/" + token, 0));

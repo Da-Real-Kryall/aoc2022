@@ -26,8 +26,9 @@ pub fn part1() -> String {
                 if dx.abs() == 1 {
                     tail_position.0 += dx.signum();
                 }
-            } if dx.abs() > 1 {
-                tail_position.0 += dx.signum(); 
+            }
+            if dx.abs() > 1 {
+                tail_position.0 += dx.signum();
                 if dy.abs() == 1 {
                     tail_position.1 += dy.signum();
                 }
@@ -68,21 +69,22 @@ pub fn part2() -> String {
                 "R" => body_positions[0].0 += 1,
                 _ => panic!("Invalid direction"),
             }
-            for i in 0..body_positions.len()-1 {
+            for i in 0..body_positions.len() - 1 {
                 let head_position = body_positions[i];
 
-                let dy: i32 = head_position.1 - body_positions[i+1].1;
-                let dx: i32 = head_position.0 - body_positions[i+1].0;
-                
+                let dy: i32 = head_position.1 - body_positions[i + 1].1;
+                let dx: i32 = head_position.0 - body_positions[i + 1].0;
+
                 if dy.abs() > 1 {
-                    body_positions[i+1].1 += dy.signum();
+                    body_positions[i + 1].1 += dy.signum();
                     if dx.abs() == 1 {
-                        body_positions[i+1].0 += dx.signum();
+                        body_positions[i + 1].0 += dx.signum();
                     }
-                } if dx.abs() > 1 {
-                    body_positions[i+1].0 += dx.signum(); 
+                }
+                if dx.abs() > 1 {
+                    body_positions[i + 1].0 += dx.signum();
                     if dy.abs() == 1 {
-                        body_positions[i+1].1 += dy.signum();
+                        body_positions[i + 1].1 += dy.signum();
                     }
                 }
             }

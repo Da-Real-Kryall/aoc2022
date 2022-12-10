@@ -70,7 +70,7 @@ pub fn part1() -> String {
                     sack_a = format!("{}{}", sack_a, letter);
                 } else {
                     for char in sack_a.chars() {
-                        if char == letter && found_char == false{
+                        if char == letter && found_char == false {
                             println!("{}", char);
                             println!("{}", priority(char));
                             total_score += priority(letter);
@@ -89,7 +89,6 @@ pub fn part2() -> String {
     let mut total_score: i128 = 0;
 
     for index in 0..(input.lines().count() / 3) {
-
         let sack_a = input.lines().nth(index * 3).unwrap();
         let sack_b = input.lines().nth(index * 3 + 1).unwrap();
         let sack_c = input.lines().nth(index * 3 + 2).unwrap();
@@ -99,7 +98,11 @@ pub fn part2() -> String {
 
         for sack in sacks {
             for letter in sack.chars() {
-                if sack_a.matches(letter).count() != 0 && sack_b.matches(letter).count() != 0 && sack_c.matches(letter).count() != 0 && candidates.matches(letter).count() == 0 {
+                if sack_a.matches(letter).count() != 0
+                    && sack_b.matches(letter).count() != 0
+                    && sack_c.matches(letter).count() != 0
+                    && candidates.matches(letter).count() == 0
+                {
                     candidates = format!("{}{}", candidates, letter);
                 }
             }
@@ -108,7 +111,6 @@ pub fn part2() -> String {
         for letter in candidates.chars() {
             total_score += priority(letter);
         }
-        
     }
     total_score.to_string()
 }
