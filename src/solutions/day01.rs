@@ -42,7 +42,8 @@ pub fn part2() -> String {
         .into_iter()
         .rev()
         .take(3)
-        .sum::<i128>().to_string()
+        .sum::<i128>()
+        .to_string()
 
     /*
     let input = include_str!("../inputs/day01.txt");
